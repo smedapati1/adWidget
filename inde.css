@@ -1,3 +1,15 @@
+Skip to content
+Personal Open source Business Explore Pricing
+This repository
+Search
+Sign in or Sign up
+ Watch 1  Star 0  Fork 0 smedapati1/adWidget
+ Code  Issues 0  Pull requests 0  Projects 0  Pulse  Graphs
+Branch: master Find file Copy pathadWidget/inde.css
+Fetching contributors…
+Cannot retrieve contributors at this time
+RawBlameHistory     
+63 lines (51 sloc)  945 Bytes
 
 .divTable{
 
@@ -16,9 +28,9 @@
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    max-width:300px;
-    max-height: 250px;
-    min-width:65px;
+    width:100%;
+    margin : 0px;
+    padding:0px;
     overflow:hidden;
     float:left;
 
@@ -27,12 +39,13 @@
 
 .image_container {
     position:relative;
-   width:100%;
-    height:100%;
+   width:90%;
+   min-width: 65px;
+    height:90%;
 }
 .main_container {
     background-color: transparent;
-    width: 80%;
+    width: 100%;
     height:100%;
     min-width:15%;
 
@@ -59,5 +72,5 @@
     text-align: left;
     font-weight: bold;
     float:left;
-    color:inherit;
+    
 }
