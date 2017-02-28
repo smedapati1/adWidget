@@ -2,9 +2,35 @@
  * Created by smedapati on 2/18/2017.
  */
 
-var x = window.adWidget_x ? window.adWidget_x:1;
-var y = window.adWidget_y ? window.adWidget_y:4;
-var d= window.d ? window.d: 'WIDGET_abd0';
+
+var x = 1,y = 4, d= '';
+
+ScriptPath();
+ 
+function ScriptPath() {
+    var scriptPath = '';
+    try {
+      throw new Error();
+    }
+    catch(e) {
+      var stackLines = e.stack.split('\n');
+      console.log(stackLines);
+      var callerIndex = 0;
+      
+      var em= stackLines[2].split('\:');
+      for(var i=0;i<em.length;i++){
+        if(em[i].indexOf("?")!=-1){
+          var tempParams= em[i].split("?");
+          var params=tempParams[1].split("_");
+          x=params[0];
+          y=params[1] ;
+          d= params[2]+"_"+params[3];
+        }
+      }
+
+     
+    }
+ };   
 var ad_library= [{
   img_url:'./sample.png',
   ad_text:'Hi there',
@@ -38,7 +64,7 @@ function createAdCanvas(x,y) {
   var element_code='';
   element_code += '<div><p class = "ad_caption" style=" text-align: left;font-weight: bold;color:'+ document.getElementsByTagName('h1')[0].style.color+'">You Might Also Like</p></div><div style="float:left;clear:both;display:inline-block;width:100%">';
   var row_html='',ad_incrementor =0;
-
+console.log(x);
  // var ad_data='  <figure class="ad_container"> <img src="./featured2-cb0dc81d.jpg" alt="Smiley face" class="image_container"> <figcaption><p>Put your text here </p></figcaption> </figure>';
   for(var i=0;i<y;i++){
     row_html=' ';
@@ -71,6 +97,7 @@ function createAdCanvas(x,y) {
  var div = document.createElement('div');
  div.className='main_container';
  div.innerHTML = element_code;
+
  document.getElementById(d).appendChild(div);
 
 }
