@@ -3,6 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+    .left{
+    overflow: hidden;
+    min-width: 50px;
+    width: 100%;
+    border: 2px dashed gray;
+    float:left;
+
+}
+.right{
+    float: right;
+    width:25%;
+    min-height: 50px;
+    margin-left: 10px;
+    border: 2px dashed red;
+}
+    </style>
 </head>
 <body style="color:pink">
 
@@ -13,14 +30,7 @@ var s = document.createElement('script'); d += ins;document.write('<div id="'+d+
 s.type = 'text/javascript'; s.src = './adWidget.js?'+adWidget_x+'_'+adWidget_y+'_'+d; s.async = true; s.defer = true; s.setAttribute('divName',d);s.setAttribute('adWidget_x',adWidget_x); s.setAttribute('adWidget_y',adWidget_y);
 document.body.appendChild(s);}((++window.abd || (window.abd = 0))));</script></div>
 
-<div class="right">
-<script>var adWidget_x= 1, adWidget_y=5, d = "WIDGET_abd";(function(ins){ if ('https:'==document.location.protocol){var h='localhost:3000/'; } else {var h='localhost:3000/';}
-	console.log(window.abd);
-var   s = document.createElement('script');d += ins;document.write('<div id="'+d+'" style="width:100%"></div>');
-s.type = 'text/javascript'; s.src = './adWidget.js?'+adWidget_x+'_'+adWidget_y+'_'+d; s.async = true; s.defer = true; 
-document.body.appendChild(s);}((++window.abd || (window.abd = 0))));</script>
-</div>
- 
+< 
 
 </body>
 </html>
